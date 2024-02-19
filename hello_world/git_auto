@@ -1,0 +1,5 @@
+#!/bin/bash
+chmod -R u+x *
+git add .
+git commit -m 'mise a jour'
+git push

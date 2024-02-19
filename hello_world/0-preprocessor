@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc -E $CFILE -o c /*# Passer le fichier C à travers le préprocesseur et enregistrer le résultat dans un fichier "c" # Passer le fichier C à travers le préprocesseur et enregistrer le résultat dans un fichier "c" */
