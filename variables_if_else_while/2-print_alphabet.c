@@ -2,14 +2,16 @@
 
 /**
  * main - imprime l'alphabet en minuscules.
- * Return: Always 0 (Success)
+ * Return: Toujours 0
  */
-int main () {
-   char ch;
+int main(void)
+{
+	char ch;
 
-   for(ch = 'a' ; ch <= 'z' ; ch++) {
-      putchar(ch);
-   }
-   
-   return(0);
+	for (ch = 'a' ; ch <= 'z' ; ch++)
+	{
+		putchar(ch);
+	}
+
+	return (0);
 }
