@@ -5,7 +5,7 @@
 /**
  * main - assigne un nombre aléatoire à int n à chaque fois.
  * if s'exécute, et affiche un resultat selon la condition
- * Retour : Toujours 0
+ * Return: Toujours 0
  */
 int main(void)
 {
