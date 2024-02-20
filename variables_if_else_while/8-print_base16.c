@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - imprime tous les chiffres de la base 16 en minuscules, suivi d'une nouvelle ligne.
+ * main - imprime tous les chiffres de la base 16 en minuscules,
+ * suivi d'une nouvelle ligne.
  * Return: Toujours 0
  */
 int main(void)
