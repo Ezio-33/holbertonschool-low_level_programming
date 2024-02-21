@@ -9,6 +9,6 @@ int main(void)
 	char *str = "_putchar\n";
 
 	while (*str)
-		_putchar(*str++);
+		putchar(*str++);
 	return (0);
 }
