@@ -1,34 +1,33 @@
+#include <stdio.h>
 #include "main.h"
+
 /**
- * print_to_98 - affiche tous les nombres naturels de
- * nombres à 98, suivis d'un saut de ligne
- * @nombres: le nombre à partir duquel commencer l'impression
+ * print_to_98 - affiche tous les nombres naturels de nombre à 98,
+ * suivi d'un saut de ligne
+ * @nombre: affiche à partir de ce nombre
  */
-void print_to_98(int nombres)
+void print_to_98(int nombre)
 {
-	if (nombres <= 98)
+	int i, compteurDecroissant;
+
+	if (nombre <= 98)
 	{
-		while (nombres < 98)
+		for (i = nombre; i <= 98; i++)
 		{
-			_putchar((nombres / 10) + '0');
-			_putchar((nombres % 10) + '0');
-			_putchar(',');
-			_putchar(' ');
-			nombres++;
+			if (i != 98)
+				printf("%d, ", i);
+			else if (i == 98)
+				printf("%d\n", i);
+		}
+	} else if (nombre >= 98)
+	{
+		for (compteurDecroissant = nombre; compteurDecroissant >= 98;
+		compteurDecroissant--)
+		{
+			if (compteurDecroissant != 98)
+				printf("%d, ", compteurDecroissant);
+			else if (compteurDecroissant == 98)
+				printf("%d\n", compteurDecroissant);
 		}
 	}
-	else
-	{
-		while (nombres > 98)
-		{
-			_putchar((nombres / 10) + '0');
-			_putchar((nombres % 10) + '0');
-			_putchar(',');
-			_putchar(' ');
-			nombres--;
-		}
-	}
-	_putchar('9');
-	_putchar('8');
-	_putchar('\n');
 }
