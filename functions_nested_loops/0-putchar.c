@@ -8,7 +8,9 @@ int main(void)
 {
 	char *str = "_putchar\n";
 
+
 	while (*str)
 		putchar(*str++);
+	putchar('\n');
 	return (0);
 }
