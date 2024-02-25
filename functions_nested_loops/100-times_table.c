@@ -5,38 +5,31 @@
 * @nombre1: nombre de la table de multiplication
 */
 
-
-void print_times_table(int nombre1)
-{
-	int nombre2, nombre3, produit;
-
-	if (nombre1 < 0 || nombre1 > 15)
-	{
+void print_times_table(int n) {
+	if (n < 0 || n > 15)
 		return;
-	}
 
-	for (nombre2 = 0; nombre2 <= nombre1; nombre2++)
-	{
-		for (nombre3 = 0; nombre3 <= nombre1; nombre3++)
-		{
-			produit = nombre3 * nombre2;
-			if (nombre3 == 0)
-			{
-				printf("%d", produit);
+	for (int i = 0; i <= n; i++) {
+		for (int j = 0; j <= n; j++) {
+			int product = i * j;
+			if (j != 0) {
+				_putchar(',');
+				_putchar(' ');
+				if (product < 10) {
+					_putchar(' ');
+					_putchar(' ');
+				} else if (product < 100) {
+					_putchar(' ');
+				}
 			}
-			else if (produit < 10 && nombre3 != 0)
-			{
-				printf(",   %d", produit);
+			if (product >= 100) {
+				_putchar(product / 100 + '0');
+				_putchar((product / 10) % 10 + '0');
+			} else if (product >= 10) {
+				_putchar(product / 10 + '0');
 			}
-			else if (produit >= 10 && produit < 100)
-			{
-				printf(",  %d", produit);
-			}
-			else if (produit >= 100)
-			{
-				printf(", %d", produit);
-			}
+			_putchar(product % 10 + '0');
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
