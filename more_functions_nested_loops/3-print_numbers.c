@@ -5,7 +5,7 @@
 */
 void print_numbers(void)
 {
-	char nombre = '0';
+	int nombre = '0';
 	while (nombre <= '9')
 	{
 		_putchar(nombre);
