@@ -5,6 +5,6 @@
 
 int _isupper(int caractere);
 int _isdigit(int nombre);
-Prototype : int mul(int nombre1, int nombre2);
+int mul(int nombre1, int nombre2);
 
 #endif
