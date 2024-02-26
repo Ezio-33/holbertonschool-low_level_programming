@@ -6,5 +6,6 @@
 int _isupper(int caractere);
 int _isdigit(int nombre);
 int mul(int nombre1, int nombre2);
+void print_numbers(void);
 
 #endif
