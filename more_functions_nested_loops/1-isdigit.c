@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*_isupper - fonction qui vérifie la présence d'un chiffre (0 à 9)
+*_isdigit - fonction qui vérifie la présence d'un chiffre (0 à 9)
 *@nombre: caractère testé
 *Return: Renvoie 1 si c est un chiffre, sinon 0
 */
