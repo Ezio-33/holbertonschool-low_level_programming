@@ -1,8 +1,8 @@
 #include "main.h"
 /**
 *mul - fonction qui multiplie deux entiers.
-*@a: premier numéro
-*@b: deuxième numéro
+*@nombre1: premier numéro
+*@nombre2: deuxième numéro
 *Return: renvoie le résultat
 */
 
