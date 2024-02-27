@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Demander à l'utilisateur s'il veut ajouter tous les fichiers ou spécifier un fichier
+echo "Voulez-vous ajouter tous les fichiers ? (O/n)"
+read choice
+
+if [ "$choice" = "n" ] || [ "$choice" = "N" ]; then
+    echo "Entrez le nom du fichier à ajouter :"
+    read filename
+    git add "$filename"
+else
+    git add .
+fi
+
+# Demander à l'utilisateur de saisir le commentaire du commit
+echo "Entrez le commentaire de mise à jour du commit :"
+read comment
+
+# Effectuer le commit et le push avec le commentaire spécifié
+git commit -m "$comment"
+git push
