@@ -27,4 +27,4 @@ git commit -m "$comment"
 git push
 
 # Afficher le message approprié en fonction de ce qui a été ajouté avec la couleur verte
-echo -e "${GREEN}$added_message mis à jour sur ton GIT-HUB${NC}"
+echo -e "${GREEN}$added_message mis à jour sur ton GIT-HUB avec le commentaire \"$comment\"${NC}"
