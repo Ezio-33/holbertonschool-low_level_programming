@@ -1,39 +1,30 @@
 #include "main.h"
 
 /**
- * main - Point d'entrée du programme
- * Return: Toujours 0
- */
-int main(void)
+* print_triangle - affiche un triangle de taille n
+* @size: taille du triangle
+*/
+void print_triangle(int size)
 {
-	int nombre = 1;
-
-	while (nombre <= 100)
+	if (size <= 0)
 	{
-		if (nombre % 3 == 0 && nombre % 5 == 0)
-		{
-			printf("FizzBuzz");
-		}
-		else if (nombre % 3 == 0)
-		{
-			printf("Fizz");
-		}
-		else if (nombre % 5 == 0)
-		{
-			printf("Buzz");
-		}
-		else
-		{
-			printf("%d", nombre);
-		}
-		if (nombre != 100)
-		{
-			printf(" ");
-		}
-
-		nombre++;
+		_putchar('\n');
 	}
-	printf("\n");
+	else
+	{
+		int ligne = 1;
 
-	return (0);
+		while (ligne <= size)
+		{
+			int colonne = 1;
+
+			while (colonne <= ligne)
+			{
+				_putchar('#');
+				colonne++;
+			}
+			_putchar('\n');
+			ligne++;
+		}
+	}
 }
