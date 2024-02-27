@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
-* print_triangle - affiche un triangle de taille n
+* print_triangle - imprime un triangle de taille n
 * @size: taille du triangle
 */
 void print_triangle(int size)
+
 {
 	if (size <= 0)
 	{
@@ -16,12 +17,18 @@ void print_triangle(int size)
 
 		while (ligne <= size)
 		{
-			int colonne = 1;
+			int espaces = size - ligne;
+			int diese = ligne;
 
-			while (colonne <= ligne)
+			while (espaces > 0)
+			{
+				_putchar(' ');
+				espaces--;
+			}
+			while (diese > 0)
 			{
 				_putchar('#');
-				colonne++;
+				diese--;
 			}
 			_putchar('\n');
 			ligne++;
