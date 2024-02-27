@@ -1,4 +1,7 @@
 #!/bin/bash
+# Définition des séquences d'échappement ANSI pour les couleurs
+RED='\033[0;31m'
+NC='\033[0m' # No Color
 #ajoute les droit d'execution a tout les utilisateur
 chmod -R u+x *
 # Demander à l'utilisateur s'il veut ajouter tous les fichiers ou spécifier un fichier
@@ -23,5 +26,5 @@ read comment
 git commit -m "$comment"
 git push
 
-# Afficher le message approprié en fonction de ce qui a été ajouté
-echo "$added_message mis à jour sur ton GIT-HUB"
+# Afficher le message approprié en fonction de ce qui a été ajouté avec la couleur rouge
+echo -e "${RED}$added_message mis à jour sur ton GIT-HUB${NC}"
