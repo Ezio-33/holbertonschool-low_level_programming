@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * puts_half - Imprime la deuxième moitié de la chaîne de caractères.
- * @chaine: La chaîne de caractères dont la deuxième moitié doit être imprimée.
- */
+* puts_half - Imprime la deuxième moitié de la chaîne de caractères.
+* @chaine: La chaîne de caractères dont la deuxième
+*moitié doit être imprimée.
+*/
 void puts_half(char *chaine)
 {
 	int longueur = 0;
