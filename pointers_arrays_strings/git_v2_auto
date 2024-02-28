@@ -26,10 +26,9 @@ read comment
 git commit -m "$comment"
 git push
 
-# Augmenter la taille du texte et mettre en gras
+# Mets le texte en gras et change la couleur
 tput bold
 tput setaf 2 # Définir la couleur en vert
-tput ssetaf 2 # Définir la taille du texte à 2
 
 # Afficher le message approprié en fonction de ce qui a été ajouté
 echo "$added_message mis à jour sur ton GIT-HUB avec le commentaire \"$comment\""
