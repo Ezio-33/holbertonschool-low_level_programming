@@ -28,7 +28,8 @@ git push
 
 # Augmenter la taille du texte et mettre en gras
 tput bold
-tput setaf 2 # Set color to green
+tput setaf 2 # Définir la couleur en vert
+tput ssetaf 2 # Définir la taille du texte à 2
 
 # Afficher le message approprié en fonction de ce qui a été ajouté
 echo "$added_message mis à jour sur ton GIT-HUB avec le commentaire \"$comment\""
