@@ -16,7 +16,7 @@ char *_strchr(char *chaine, char caractere)
 			return (chaine);
 		}
 		chaine++;
-
+		
 	}
 	return ('\0');
 }
