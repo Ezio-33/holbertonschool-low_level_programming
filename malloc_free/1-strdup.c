@@ -4,9 +4,10 @@
 /**
  * _strdup - Duplique une chaîne de caractères
  * @chaine: Chaîne à dupliquer
- * Return: (Un pointeur vers la nouvelle chaîne dupliquée, ou NULL en cas d'échec)
+ * Return: (Un pointeur vers la nouvelle chaîn
+ *  dupliquée, ou NULL en cas d'échec)
  */
- 
+
 char *_strdup(char *chaine)
 {
 	char *duplique;
