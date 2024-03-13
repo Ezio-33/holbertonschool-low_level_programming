@@ -6,7 +6,6 @@
  * @name: Premier elements
  * @age: Deuxième elements
  * @owner: Troisième elements
- * dog_t - typedef pour struct dog
  */
 struct dog
 {
@@ -15,7 +14,12 @@ struct dog
 	char *owner;
 };
 
+/**
+ * dog_t - typedef pour struct dog
+ */
+
 typedef struct dog dog_t;
+
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
