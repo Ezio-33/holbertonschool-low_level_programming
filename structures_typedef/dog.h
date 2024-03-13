@@ -6,6 +6,7 @@
  * @name: Premier elements
  * @age: Deuxième elements
  * @owner: Troisième elements
+ * dog_t - typedef pour struct dog
  */
 struct dog
 {
