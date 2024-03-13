@@ -17,4 +17,6 @@ void print_dog(struct dog *chien)
 										 ? chien->owner
 										 : "(nil)");
 	}
+	else
+		return;
 }
