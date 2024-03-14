@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * string_nconcatene - concatene deux chaînes de caracteres
+ * string_nconcat - concatene deux chaînes de caracteres
  * @s1: Premiere chaine de caracteres
  * @s2: Deuxieme chaine de caracteres
  * @n: Nombre d'octets a concateneéner de s2
