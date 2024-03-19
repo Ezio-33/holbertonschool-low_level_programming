@@ -1,47 +1,38 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include "3-calc.h"
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * main - programme qui effectue des opérations simples
+ * @argc: nombre d'arguments
+ * @argv: tableau d'arguments
  *
- * Return: Nothing.
+ * Return: 0 en cas de succès, sort avec un statut
+ * 98, 99 ou 100 en cas d'échec
  */
-void simple_print_buffer(int *buffer, unsigned int size)
+int main(int argc, char *argv[])
 {
-	unsigned int i;
+	int num1, num2, result;
+	int (*op_func)(int, int);
 
-	i = 0;
-	while (i < size)
+	if (argc != 4)
 	{
-		if (i % 10)
-		{
-			printf(" ");
-		}
-		if (!(i % 10) && i)
-		{
-			printf("\n");
-		}
-		printf("0x%02x", buffer[i]);
-		i++;
+		printf("Error\n");
+		exit(98);
 	}
-	printf("\n");
-}
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	int *a;
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	op_func = get_op_func(argv[2]);
 
-	a = array_range(0, 10);
-	simple_print_buffer(a, 11);
-	free(a);
+	if (!op_func)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	result = op_func(num1, num2);
+	printf("%d\n", result);
+
 	return (0);
 }
