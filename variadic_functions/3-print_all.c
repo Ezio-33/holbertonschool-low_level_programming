@@ -40,8 +40,8 @@ void print_all(const char *const format, ...)
 				i++;
 				continue;
 			}
-			i++;
 			separator = ", ";
+			i++;
 		}
 	}
 	printf("\n");
