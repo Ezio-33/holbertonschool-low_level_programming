@@ -9,7 +9,6 @@ void print_all(const char *const format, ...)
 	va_list args;
 	char *separator = "";
 	unsigned int i = 0;
-	char c;
 	char *str;
 
 	va_start(args, format);
@@ -18,8 +17,7 @@ void print_all(const char *const format, ...)
 	{
 		while (format[i])
 		{
-			c = format[i];
-			switch (c)
+			switch (format[i])
 			{
 			case 'c':
 				printf("%s%c", separator, va_arg(args, int));
@@ -46,7 +44,6 @@ void print_all(const char *const format, ...)
 			separator = ", ";
 		}
 	}
-
 	printf("\n");
 	va_end(args);
 }
