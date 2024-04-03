@@ -39,7 +39,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	for (i = 0; i < idx - 1 && noeud_courant != NULL; i++)
 		noeud_courant = noeud_courant->next;
 
-	if (noeud_courant == NULL || noeud_courant->next == NULL)
+	if (noeud_courant == NULL)
 	{
 		free(nouveau_noeud);
 		return (NULL);
@@ -47,7 +47,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	nouveau_noeud->prev = noeud_courant;
 	nouveau_noeud->next = noeud_courant->next;
-	noeud_courant->next->prev = nouveau_noeud;
+	if (noeud_courant->next != NULL)
+		noeud_courant->next->prev = nouveau_noeud;
 	noeud_courant->next = nouveau_noeud;
 
 	return (nouveau_noeud);
