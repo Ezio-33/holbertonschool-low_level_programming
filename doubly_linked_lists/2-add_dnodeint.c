@@ -22,8 +22,6 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	if (*head != NULL)
 		(*head)->prev = nouveau_noeud;
-	/** Les parenthèses permettent de forcer l'ordre des opérations et d'accéder correctement au
-	 * champ prev du premier nœud de la liste */
 	*head = nouveau_noeud;
 
 	return (nouveau_noeud);
