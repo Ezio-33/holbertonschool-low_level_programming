@@ -1,34 +1,24 @@
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
-#include "lists.h"
+#include "main.h"
 
 /**
  * main - check the code
  *
- * Return: Always EXIT_SUCCESS.
+ * Return: Always 0.
  */
 int main(void)
 {
-	dlistint_t *head;
-	dlistint_t *new;
-	dlistint_t hello = {8, NULL, NULL};
-	size_t n;
+    unsigned int n;
 
-	head = &hello;
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
-	{
-		dprintf(2, "Error: Can't malloc\n");
-		return (EXIT_FAILURE);
-	}
-	new->n = 9;
-	head->prev = new;
-	new->next = head;
-	new->prev = NULL;
-	head = new;
-	n = print_dlistint(head);
-	printf("-> %lu elements\n", n);
-	free(new);
-	return (EXIT_SUCCESS);
+    n = binary_to_uint("1");
+    printf("%u\n", n);
+    n = binary_to_uint("101");
+    printf("%u\n", n);
+    n = binary_to_uint("1e01");
+    printf("%u\n", n);
+    n = binary_to_uint("1100010");
+    printf("%u\n", n);
+    n = binary_to_uint("0000000000000000000110010010");
+    printf("%u\n", n);
+    return (0);
 }

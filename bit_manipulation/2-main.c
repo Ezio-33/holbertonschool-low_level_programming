@@ -1,26 +1,20 @@
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
-#include "lists.h"
+#include "main.h"
 
 /**
  * main - check the code
  *
- * Return: Always EXIT_SUCCESS.
+ * Return: Always 0.
  */
 int main(void)
 {
-	dlistint_t *head;
+    int n;
 
-	head = NULL;
-	add_dnodeint(&head, 0);
-	add_dnodeint(&head, 1);
-	add_dnodeint(&head, 2);
-	add_dnodeint(&head, 3);
-	add_dnodeint(&head, 4);
-	add_dnodeint(&head, 98);
-	add_dnodeint(&head, 402);
-	add_dnodeint(&head, 1024);
-	print_dlistint(head);
-	return (EXIT_SUCCESS);
+    n = get_bit(1024, 10);
+    printf("%d\n", n);
+    n = get_bit(98, 1);
+    printf("%d\n", n);
+    n = get_bit(1024, 0);
+    printf("%d\n", n);
+    return (0);
 }

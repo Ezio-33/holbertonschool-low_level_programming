@@ -19,11 +19,11 @@ else
 fi
 
 # Demander à l'utilisateur de saisir le commentaire du commit
-echo "Completez le commentaire de mise à jour du commit:C - Bit manipulation tasks :"
+echo "Completez le commentaire de mise à jour du commit:C - File I/O tasks :"
 read comment
 
 # Effectuer le commit et le push avec le commentaire spécifié
-git commit -m "C - Bit manipulation tasks $comment"
+git commit -m "C - File I/O tasks $comment"
 git push
 
 # Mets le texte en gras et change la couleur
@@ -32,7 +32,7 @@ tput setaf 2 # Définir la couleur en vert
 
 # Afficher le message approprié en fonction de ce qui a été ajouté
 echo "$added_message mis à jour sur ton GIT-HUB avec le commentaire:"
-echo " \"C - Bit manipulation tasks :$comment\""
+echo " \"C - File I/O tasks :$comment\""
 
 # Rétablir la taille du texte et la couleur par défaut
 tput sgr0
